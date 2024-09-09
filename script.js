@@ -1,20 +1,27 @@
+function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const content = document.getElementById("content");
 
-// Dynamically generate the home page after dom loads
+  drawer.classList.toggle("open");
+  overlay.classList.toggle("open");
+  content.classList.toggle("drawer-open");
+}
+
+// Dynamically generate the page after dom loads
 document.addEventListener("DOMContentLoaded", async function () {
-
   async function fetchYaml(url) {
     try {
       // Fetch the data source
       const response = await fetch(url, { method: "GET" });
-        // console.log(response);
+      // console.log(response);
 
       // Convert YAML to JSON
       const page = await response.text().then(jsyaml.load);
 
       return page;
-      } 
-      catch (error) {
-        console.error("YAML file not loaded", error);
+    } catch (error) {
+      console.error("YAML file not loaded", error);
     }
   }
 
@@ -83,7 +90,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     return sectionsDiv;
   }
 
-  // General Features 
+  // General Features
   function renderGeneralFeatures(page) {
     const generalFeaturesDiv = document.createElement("div");
     generalFeaturesDiv.className = "landing-general-features";
@@ -189,7 +196,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     page.cta.links.forEach((link) => {
       const a = document.createElement("a");
       a.href = link.to;
-      a.target = link.to;
+      a.target = "_blank";
       a.className = "cta-button";
       a.textContent = link.label;
       ctaDiv.appendChild(a);
