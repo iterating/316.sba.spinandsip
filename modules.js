@@ -1,4 +1,4 @@
-export function toggleDrawer() {
+export async function toggleDrawer() {
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
   const content = document.getElementById("content");

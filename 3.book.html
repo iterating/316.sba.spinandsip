@@ -50,11 +50,14 @@
 <body>
 <!-- Navigation bar and login -->
 <header>
-    <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
-    <form action="" id="login" >
-        <input type="text"
+    <span class="menu-icon" id="menu-icon">&#9776;</span>
+    <a href="./3.book.html" ><button class="cta-button"> 
+        Book Us
+    </button></a>
+    <form action="" id="login">
+        <input type="text" 
         id="username" 
-        name="username" 
+        name="username" p
         placeholder="Username"
         required>
         <input type="text" 
@@ -70,11 +73,11 @@
     <div class="drawer" id="drawer">
         <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
         <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./book.html">Book</a>
+        <a href="./2.about.html">About</a>
+        <a href="./3.book.html">Book</a>
         <a href="#">Logout</a>
     </div>
-    <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
+    <div class="overlay" id="overlay"></div>
 </header>
         
         
@@ -137,6 +140,6 @@ makeCalendar=()=> {
 makeCalendar();
 
 </script>
-<script src="script.js" defer></script>    
-</body>
+<script type="module" src="modules.js"></script>
+<script type="module" src="scripts.js"></script></body>
 </html>

@@ -1,12 +1,11 @@
-import {toggleDrawer, fetchYaml, renderHeroSection, renderFeatureSections, renderGeneralFeatures, renderTestimonials, renderCTA  } from './modules.js'
- 
-document.addEventListener('DOMContentLoaded', function() {
+import {toggleDrawer, fetchYaml, renderHeroSection, renderFeatureSections, renderGeneralFeatures, renderTestimonials, renderCTA  } from './modules.js' 
+
+document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.querySelector(".menu-icon");
   const overlay = document.querySelector(".overlay");
 
-    menuIcon.addEventListener('click', toggleDrawer);
-    overlay.addEventListener("click", toggleDrawer);
-
+  menuIcon.addEventListener("click", toggleDrawer);
+  overlay.addEventListener("click", toggleDrawer);
 });
 
 
