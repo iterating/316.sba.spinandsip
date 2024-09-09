@@ -202,14 +202,3 @@ export function renderCTA(page) {
 
   return ctaDiv;
 }
-
- async function renderLandingPage() {
-  const page = await fetchYaml("indexx.yml");
-  const content = document.getElementById("homepage");
-  content.appendChild(renderHeroSection(page));
-  content.appendChild(renderFeatureSections(page));
-  content.appendChild(renderGeneralFeatures(page));
-  content.appendChild(renderTestimonials(page));
-  content.appendChild(renderCTA(page));
-}
-renderLandingPage();

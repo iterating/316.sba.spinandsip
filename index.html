@@ -12,7 +12,7 @@
 
 <!-- Navigation bar and login -->
 <header>
-    <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
+    <span class="menu-icon" id="menu-icon">&#9776;</span>
     <a href="./3.book.html" ><button class="cta-button"> 
         Book Us
     </button></a>
@@ -39,7 +39,7 @@
         <a href="./3.book.html">Book</a>
         <a href="#">Logout</a>
     </div>
-    <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
+    <div class="overlay" id="overlay"></div>
 </header>
         
 <!-- Content  -->
@@ -47,10 +47,10 @@
     <div id="homepage"></div>
 </main>
 <!-- Yaml to JSON to to HTML -->
-<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
-<script type="module" src="script.js"></script>
+<script type="module" src="modules.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
+<script type="module" src="scripts.js"></script>
 
-<!-- <script src="drawer.js" defer></script> -->
 
 </body>
 </html>
