@@ -39,7 +39,6 @@
 .landing-hero .headline-badge {
   position: relative;
   top: 100px;
-
 }
 
 .landing-hero .headline-badge .badge-link {
@@ -135,21 +134,27 @@ max-width: 70%;
   border-radius: 8px;
   background-color: #7a12e2;
   color: aliceblue;
-  padding: 5px;
   box-shadow: 0 0 8px black;
+  padding: 0.4vw;
+  font-size: 0.8vw;
+  overflow: hidden;
+  text-overflow: clip;
+  
 }
 
 .button-default {
   border-radius: 8px;
   background-color: #7a12e2;
   color: aliceblue;
+  font-size: 0.5vw;
+
 }
 
 body {
   font-family: 'Georgia', serif;
   margin: 0;
   background-color: rgb(6, 2, 1);
-  color: whitesmoke;
+  color: aliceblue;
   flex-direction: column; 
   display: flex;
 }
@@ -160,12 +165,18 @@ header {
     height: 2rem;
     overflow: hidden;
     display: flex;
-    flex-wrap: nowrap;
+    flex-flow: nowrap;
     justify-content: space-between;
     position: fixed;
     width: 100%;
     z-index: 999;
     background-color: black;
+}
+
+
+#username, #password {
+  display: inline;
+  max-width: 30%;
 }
 
 .menu-icon {
@@ -236,6 +247,13 @@ main {
   body {
     padding: 0;
   }
+}
+
+h1 {
+  font-size: 4vw;;
+}
+h2 {
+  font-size: 3vw;
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px){}

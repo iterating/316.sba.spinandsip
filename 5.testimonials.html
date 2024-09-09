@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="content"></div>
+
+
+<script>
+    import {renderTestimonials, fetchYaml} from 'script.js'
+
+async function renderPage() {
+    const page = await fetchYaml("indexx.yml");
+    const content = document.getElementById("content");
+    content.appendChild(renderTestimonials(page));
+  }
+
+  renderPage();
+
+</script>
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+</html>

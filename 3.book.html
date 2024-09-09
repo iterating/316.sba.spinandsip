@@ -13,15 +13,13 @@
         width: 100%;
         height: 100%;
         display: flex ;
-        flex-direction: column;
+        flex-flow: wrap column;
         align-items: center;
-
 }
 
 #calendar-header, #calendar-days {
     display: flex;
-    flex-flow: wrap;
-    justify-content: start;
+    flex-flow: wrap ;
     width: 700px;
 }
 .day,th {
@@ -40,6 +38,12 @@
     background-color: #7a12e2;
     color: #bfbfbf;
 }
+#booking-form{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
 
     </style>
 </head>
@@ -47,10 +51,8 @@
 <!-- Navigation bar and login -->
 <header>
     <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
-            Bartending and Dj Services by Jinn and DJ Remedy
-
     <form action="" id="login" >
-        <input type="text" style="display: flex;"
+        <input type="text"
         id="username" 
         name="username" 
         placeholder="Username"
@@ -77,6 +79,7 @@
         
         
 <main id="content">
+    <h1>Book us for your event</h1>
     <div id="landing-section">
     <table class="calendar">
         <tr id="calendar-header">
@@ -92,13 +95,13 @@
         </tr>   
     </table>
 
-    <form id="form" style="padding:20px; width: 500px">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <form id="booking-form" style="padding:20px; width: 500px">
+        <label for="name" >Your name:</label>
+        <input type="text" id="name" name="name" placeholder="How should we address you?">
         <br>
         <label for="party-size">Party size:</label>
         <select name="party-size" id="party-size">
-        <option value="">--How Many At Your Event?--</option>
+        <option value=""> -- How Many At Your Event? -- </option>
         <option value="one-to-thirty">1-30</option>
         <option value="thirty-to-ninety">30-60</option>
         <option value="ninety-to-onefifty">90-150</option>
