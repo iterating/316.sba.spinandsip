@@ -12,7 +12,7 @@ hero:
     icon: ''
   links:
     - label: Book Now
-      to: '/book'
+      to: /book
       size: xl
       icon: ''
 
