@@ -1,5 +1,6 @@
 # Spin and Sip Website
 [Live website](https://iterating.github.io/ps-sba-html-css/)
+[Github source](https://github.com/iterating/ps-sba-html-css)
 
 I'm inspired by how Nuxt/Vue/React works and started this project with a goal of dynamically rendering most of the content. 
 
@@ -39,7 +40,10 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 - [x] Include the link to your GitHub account in your README file.
 - [x] Upload the GitHub link to this project to Canvas.
 
-## Outcomes
+## Tools Used
+- jsyaml for processing yaml into json 
+
+# Outcomes
 - Learned about some details of using modules. We cant directly call form the export modules file, We need to a seperate file to import the exported modules and then we can call them from there. 
 - Designed and built a cohesive theme that conveys critical information first that is applied though the website and each element. This work requires much time consuming design and implementation. It explains why many websites nowadays look similar to each other. They share common UI components for user familiartity and developer efficiency.   
     - I challenged myself to use overlays and overcoming to have some elements shrink with device size and some elements stay at a readable size. I accomplished this with CSS selectors and flexbox.  
