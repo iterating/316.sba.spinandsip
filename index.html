@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/styles.css">
 
-    <title>Document</title>
+    <title>Spin and Sip Event Services</title>
 
 </head>
 <body>
@@ -13,11 +13,14 @@
 <!-- Navigation bar and login -->
     <header>
         <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
-
+        Bartending and Dj Services by Jinn and DJ Remedy
+        <a href="./book.html" ><button class="cta-button"> 
+            Book Us
+        </button></a>
         <form action="" id="login">
             <input type="text" 
             id="username" 
-            name="username" 
+            name="username" p
             placeholder="Username"
             required>
             <input type="text" 
@@ -25,23 +28,26 @@
             name="password"
             placeholder="Password"
             required>
-            <button type="submit">
+            <button type="submit" class="cta-button">
                 Login
             </button>
         </form>
     </header>
 
     <div class="drawer" id="drawer">
-        <a href="#">Home</a>
-        <a href="#">Profile</a>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
         <a href="./book.html">Book</a>
         <a href="#">Logout</a>
     </div>
     <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
 
 <!-- Content  -->
-<div id="homepage"></div>
+<main id="content">
 
+    <div id="homepage"></div>
+    
+</main>
 <!-- Yaml to JSON to to HTML -->
 <script src="
 https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js

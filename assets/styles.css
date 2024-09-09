@@ -134,15 +134,12 @@ max-width: 70%;
 .cta-button {
   border-radius: 8px;
   background-color: green;
+  color: aliceblue;
   padding: 5px;
   box-shadow: 0 0 8px black;
-
-
 }
 
-p {
 
-}
 body {
   min-height: 100vh;
   font-family: 'Georgia', serif;
@@ -159,9 +156,12 @@ header {
     height: 2rem;
     overflow: hidden;
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
-    justify-content: space-between 
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
 }
 
 header > .menu-icon {

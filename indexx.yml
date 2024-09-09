@@ -45,13 +45,13 @@ features:
   items:
     - title: Personalized Experience
       description: We work with you to customize a package that fits your vision and budget.
-      icon: 
+      icon: ''
     - title: High-Quality Equipment
       description: State-of-the-art sound systems and bar setups that create the perfect ambiance for your event.
-      icon: 
+      icon: ''
     - title: Unmatched Service
       description: Our team is dedicated to making your event a success. Expect professionalism, fun, and a memorable experience for you and your guests.
-      icon: 
+      icon: ''
 
 testimonials:
   headline: Testimonials
