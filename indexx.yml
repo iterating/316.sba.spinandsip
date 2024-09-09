@@ -1,0 +1,110 @@
+title: Spin and Sip - LA Bartender and DJ
+description: Spin and Sip is Bartender Jinn and DJ Remedy providing premium event bartender and DJ services in the greater Los Angeles Area
+navigation: false
+
+hero:
+  title: Spin and Sip Event Services
+  description: Bartending and Dj Services by Jinn and DJ Remedy
+  image: landing.png
+  headline: 
+    label: ''
+    to: ''
+    icon: ''
+  links:
+    - label: Book Now
+      to: '/book'
+      size: xl
+      icon: ''
+
+sections:
+  - title: What We Offer
+    description: Whether you're hosting a wedding, corporate event, or a private party, Spin and Sip brings the energy to your event! We blend top-tier bar services with incredible DJ entertainment, ensuring your guests have an unforgettable time.
+
+    id: features
+    align: center
+    features:
+      - name: Craft Cocktails & Full Bar Service
+        description: Professional bartender Jinn crafts signature cocktails and serve your favorite drinks. Whether it's classic cocktails or personalized beverages, we cater to your tastes and theme.
+        icon: ax.drinks.unitedstatesofsmashed.png
+      - name: Professional DJ Services
+        description: DJ Remedy gets the crowd moving, knows how to read the room and keep the energy high. From chill lounge vibes to a full dance floor, we’ve got you covered.
+        icon: bar.spinandsip.anime.1.png
+      - name: Seamless Experience
+        description: We take care of everything – from setup to cleanup – so you can relax and enjoy the event with your guests. Our team works closely with you to tailor our services to your event’s unique needs.
+        icon: bar.spinandsiplogo.png
+    links:
+      - label: Explore components
+        to: /
+        color: gray
+        icon: ''
+        size: md
+
+features:
+  title: Why Choose Spin and Sip?
+  description: We understand that every event is unique. That’s why we work closely with you to create a custom package that fits your specific needs, preferences, and budget. Whether you're dreaming of a classy cocktail soirée or a high-energy dance party, we’ll make it happen.
+  items:
+    - title: Personalized Experience
+      description: We work with you to customize a package that fits your vision and budget.
+      icon: 
+    - title: High-Quality Equipment
+      description: State-of-the-art sound systems and bar setups that create the perfect ambiance for your event.
+      icon: 
+    - title: Unmatched Service
+      description: Our team is dedicated to making your event a success. Expect professionalism, fun, and a memorable experience for you and your guests.
+      icon: 
+
+testimonials:
+  headline: Testimonials
+  title: What our customers are saying.
+  description: 
+  items:
+    - quote: I hired Spin and Sip for our wedding reception, and they truly delivered. The DJ was fantastic, reading the crowd perfectly and keeping everyone on the dance floor all night. The bartender was skilled and personable, creating delicious cocktails and managing the bar seamlessly. Our guests were impressed, and the event was a huge success. Highly recommended for any event!
+      author:
+        name: Jackie Choi
+        description: 
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+          loading: lazy
+    - quote: We used Spin and Sip for our anniversary party, and they were amazing. The DJ played a perfect mix of music that fit the vibe of our event, and the bartender was efficient and friendly. Our guests loved the custom cocktails and the overall energy of the party. Spin and Sip made our celebration unforgettable!
+      author:
+        name: Jaime Everos
+        description: 
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+          loading: lazy
+    - quote: From start to finish, Spin and Sip delivered an outstanding experience for our holiday party. The DJ was fantastic, mixing tracks that appealed to everyone, and the bartender was efficient, crafting amazing drinks that everyone enjoyed. The combination of great music and excellent service made for an unforgettable evening. I would definitely hire them again for future events!
+      author:
+        name: Cory Sheppard
+        description: 
+        avatar:
+          src: https://i.pravatar.cc/120?img=8
+          loading: lazy
+    - quote: Spin and Sip’s team did an excellent job at our corporate event. The DJ kept the atmosphere upbeat and engaging, while the bartender provided top-notch service with a smile. The only reason for the 4-star rating is a minor delay in setting up, but once they were ready, everything went smoothly. Great experience overall!
+      author:
+        name: Cindy McCoy
+        description: 
+        avatar:
+          src: https://i.pravatar.cc/120?img=5
+          loading: lazy
+    # - quote: Spin and Sip has a great concept with its bar and DJ combo
+    #   author:
+    #     name: Mindy Manus
+    #     description: 
+    #     avatar:
+    #       src: https://i.pravatar.cc/120?img=8
+    #       loading: lazy
+    - quote: The mixology skills Spin and Sip were impressive, and their signature cocktails are a must-try. I loved every moment and will be recommending this to all my friends!
+      author:
+        name: Jazmin Mccall
+        description: 
+        avatar:
+          src: https://i.pravatar.cc/120?img=10
+          loading: lazy
+cta:
+  title: Let’s Make Your Event Unforgettable
+  description: Get in touch today to book Spin and Sip for your next event. We can’t wait to help you celebrate in style!
+  links:
+    - label: Book now
+      size: xl
+      color: black
+      to: /book

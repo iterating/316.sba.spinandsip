@@ -1,0 +1,238 @@
+
+.landing-hero {
+  text-align: center;
+  position:relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.landing-hero h1 {
+  z-index: 100;
+  font-size: 5vw;
+  position:absolute ;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text on image */  
+  padding: 3vw;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 20px white; /* Shadow for readability */
+}
+.landing-hero p {
+  font-size: 2vw;
+  opacity: 0.7;
+  color: #a8a8a8;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top:5%;
+  position: absolute;
+  background-color: black;
+  padding: 1vw;
+}
+
+
+.landing-hero .headline-badge {
+  position: relative;
+  top: 100px;
+
+}
+
+.landing-hero .headline-badge .badge-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing-hero .headline-badge .headline-icon {
+  margin-left: 5px;
+}
+
+.landing-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.landing-section h2 {
+  margin-bottom: 10px;
+}
+
+.landing-section p {
+  margin-bottom: 20px;
+}
+
+.landing-general-features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.landing-feature-icon {
+  width: 20%;
+;}
+
+.landing-card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+}
+.data-grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  
+}
+.testimonial-card {
+  break-inside: avoid;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #333;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.data-columns {
+  display: grid;
+  column-count: 3;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;  
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.landing-cta {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.cta-button {
+  border-radius: 8px;
+  background-color: green;
+  padding: 5px;
+  box-shadow: 0 0 8px black;
+
+
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  background-color: rgb(6, 2, 1);
+  color: whitesmoke;
+  flex-direction: column; 
+  display: flex;
+}
+
+header {
+    border-radius: 8px; /* rounded corners */
+    box-shadow: 0 0 8px black;
+    height: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between 
+}
+
+header > .menu-icon {
+    text-align: left;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0px 25px 0px 5px ;
+}
+
+/* Opens drawer */
+.drawer {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 500;
+    left: -200px; /* Keeps drawer hidden */
+    background-color: black;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    z-index: 1000;
+}
+.drawer.open {
+    left: 0;
+}
+
+.drawer a {
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+    padding: 15px 25px;
+    transition: background-color 0.3s ease;
+}
+
+/* Highlights selection in drawer when clicked */
+.drawer a:hover {
+    background-color: grey;
+} 
+
+/* Invisible part that hides drawer when clicked, usually hidden */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+/* Moves content aside when drawer opens */
+.drawer-open  {
+    margin-left: 200px;
+}
+main {
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px){}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Ex-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+}
