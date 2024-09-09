@@ -1,8 +1,11 @@
-In this Skill-based Assessment, you will be creating a small three-page website. The topic and content of your website is entirely up to you – be creative! 
-Your work will be graded based on the technical requirements listed in the following section. Creativity always works in your favor, so feel free to go beyond the scope of the listed requirements if you have time.
-Since this is likely your first time creating a website, keep it simple. Keeping it simple ensures that you can complete this project within the given time. Like most projects you’ll encounter, you should finish the absolute requirements first, and then add complexity if you have time. This also gives you a better idea of what you can get done in the given time if you were to do it again with more requirements.
-Once you have your website idea, approach your design with the user’s perspective in mind. User experience is one of the most important aspects of good web design. If users enjoy their time on your site, they are more likely to trust whatever services or information you offer, and more likely to come back and visit again.
+# Spin and Sip Website
+Im inspired by how Nuxt works and started this project with a goal of dynamically rendering most of the content.
 
+## Objectives
+- Populate homepage dynamically from yml file
+- Programatically create cards and sections according to yml data
+- Prioritize UX
+- 
 ### HTML Requirements
 - [x] Have at least three pages.
 - [x] Keep the grid system consistent between pages as much as possible.
@@ -22,13 +25,13 @@ Once you have your website idea, approach your design with the user’s perspect
 - [x] Use at least two CSS animations.
 
 ### Deliverables
-- [ ] When you have completed your website, submit the following:
 - [ ] Your completed project in a ZIP file, which should include all HTML files and any external CSS files. 
-- [ ] Include a README file that includes technical specifications and a description of your website.
+- [x] Include a README file that includes technical specifications and a description of your website.
 - [ ] Upload this ZIP file to Canvas.
-- [ ] A GitHub link to your project’s repository.
+- [x] A GitHub link to your project’s repository.
 - [ ] Include the link to your GitHub account in your README file.
 - [ ] Upload the GitHub link to this project to Canvas.
 
-
-Im inspired by how Nuxt works, dynamically render most of the content
+## Outcomes
+- [ ] Practiced building Webcomponents to build HTML by components to promote DRY
+- Designed and built a cohesive theme that conveys critical information first that is applied though the website and each element. This work requires much time consuming design and implementation. It explains why many websites nowadays look similar to each other. They share common UI components for user familiartity and developer efficiency.   

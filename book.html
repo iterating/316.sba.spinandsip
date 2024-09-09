@@ -7,29 +7,16 @@
     <link rel="stylesheet" href="assets/styles.css">
     <style>
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-main {
-    padding: 20px;
+.content {
+    padding: 20vw;
     width: 100%;
     height: 100%;
     display: flex ;
     align-items: center;
-    justify-content: center space-evenly;
+    justify-content:  space-evenly;
     max-width: 800px;
     height: 900px;
 }
-
-
 
 #calendar-header, #calendar-days {
     display: flex;
@@ -47,10 +34,10 @@ main {
     cursor: pointer;
 }
 .day:hover {
-    background-color: #4CAF50;
+    background-color: #7a12e2;
 }
 .submit-button {
-    background-color: green;
+    background-color: #7a12e2;
     color: #bfbfbf;
 }
 
@@ -73,7 +60,7 @@ main {
             name="password"
             placeholder="Password"
             required>
-            <button type="submit">
+            <button type="submit" class="button-default">
                 Login
             </button>
         </form>
@@ -104,18 +91,20 @@ main {
         </tr>   
     </table>
 
-    <form id="form" style="padding:10px; width: 500px">
+    <form id="form" style="padding:20px; width: 500px">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
+        <br>
         <label for="party-size">Party size:</label>
         <select name="party-size" id="party-size">
-        <option value="">--Please choose an option--</option>
+        <option value="">--How Many At Your Event?--</option>
         <option value="one-to-thirty">1-30</option>
         <option value="thirty-to-ninety">30-60</option>
         <option value="ninety-to-onefifty">90-150</option>
         <option value="onefifty-to-twoohundred">150-200</option>
         <option value="twohundredplus">200+</option>
         </select>
+        <br>
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required>
         
