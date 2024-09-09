@@ -1,15 +1,5 @@
 
-function toggleDrawer() {
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
-  const content = document.getElementById("content");
-
-  drawer.classList.toggle("open");
-  overlay.classList.toggle("open");
-  content.classList.toggle("drawer-open");
-}
-
-// Dynamically generate the page after dom loads
+// Dynamically generate the home page after dom loads
 document.addEventListener("DOMContentLoaded", async function () {
 
   async function fetchYaml(url) {
@@ -199,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     page.cta.links.forEach((link) => {
       const a = document.createElement("a");
       a.href = link.to;
-      a.target = "_blank";
+      a.target = link.to;
       a.className = "cta-button";
       a.textContent = link.label;
       ctaDiv.appendChild(a);
@@ -210,7 +200,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   async function renderPage() {
     const page = await fetchYaml("indexx.yml");
-    const content = document.getElementById("content");
+    const content = document.getElementById("homepage");
 
     content.appendChild(renderHeroSection(page));
     content.appendChild(renderFeatureSections(page));

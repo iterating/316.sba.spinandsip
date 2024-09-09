@@ -5,14 +5,14 @@ navigation: false
 hero:
   title: Spin and Sip Event Services
   description: Bartending and Dj Services by Jinn and DJ Remedy
-  image: landing.png
+  image: ./public/landing.png
   headline: 
     label: ''
     to: ''
     icon: ''
   links:
     - label: Book Now
-      to: /book
+      to: ${url}/book
       size: xl
       icon: ''
 
@@ -25,13 +25,13 @@ sections:
     features:
       - name: Craft Cocktails & Full Bar Service
         description: Professional bartender Jinn crafts signature cocktails and serve your favorite drinks. Whether it's classic cocktails or personalized beverages, we cater to your tastes and theme.
-        icon: ax.drinks.unitedstatesofsmashed.png
+        icon: ./public/ax.drinks.unitedstatesofsmashed.png
       - name: Professional DJ Services
         description: DJ Remedy gets the crowd moving, knows how to read the room and keep the energy high. From chill lounge vibes to a full dance floor, we’ve got you covered.
-        icon: bar.spinandsip.anime.1.png
+        icon: ./public/bar.spinandsip.anime.1.png
       - name: Seamless Experience
         description: We take care of everything – from setup to cleanup – so you can relax and enjoy the event with your guests. Our team works closely with you to tailor our services to your event’s unique needs.
-        icon: bar.spinandsiplogo.png
+        icon: ./public/bar.spinandsiplogo.png
     links:
       - label: Explore components
         to: /
@@ -95,7 +95,7 @@ testimonials:
     #       loading: lazy
     - quote: The mixology skills Spin and Sip were impressive, and their signature cocktails are a must-try. I loved every moment and will be recommending this to all my friends!
       author:
-        name: Jazmin Mccall
+        name: Jasmine McCoy
         description: 
         avatar:
           src: https://i.pravatar.cc/120?img=10
@@ -107,4 +107,4 @@ cta:
     - label: Book now
       size: xl
       color: black
-      to: /book
+      to: ./book.html

@@ -5,22 +5,21 @@ Since this is likely your first time creating a website, keep it simple. Keeping
 Once you have your website idea, approach your design with the user’s perspective in mind. User experience is one of the most important aspects of good web design. If users enjoy their time on your site, they are more likely to trust whatever services or information you offer, and more likely to come back and visit again.
 
 ### HTML Requirements
-- [ ] Have at least three pages.
+- [x] Have at least three pages.
 - [x] Keep the grid system consistent between pages as much as possible.
 - [x] Use at least ten different HTML tags.
-- [ ] Include at least one table.
-- [ ] Include at least two forms.
+- [x] Include at least one table.
+- [x] Include at least two forms.
 - [ ] Include at least one dropdown menu.
 - [ ] Include at least one of each of the following forms of content: 
     - [x] Text.
     - [x] Images.
     - [ ] GIFs.
-- [ ] (See resource links above for some free content of each of these types.)
 #### CSS Requirements
 - [x] Make use of inline, internal, and external styling.
 - [x] Use five different CSS selectors.
 - [x] Use colors that complement each other.
-- [ ] Use Flexbox and/or the Bootstrap Grid.
+- [x] Use Flexbox and/or the Bootstrap Grid.
 - [ ] Use at least two CSS animations.
 
 ### Deliverables

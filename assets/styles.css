@@ -78,7 +78,10 @@
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
 
+.landing-feature-pic {
+max-width: 70%;
 }
 .data-grid {
   display: grid;
@@ -137,6 +140,9 @@
 
 }
 
+p {
+
+}
 body {
   min-height: 100vh;
   font-family: 'Georgia', serif;
