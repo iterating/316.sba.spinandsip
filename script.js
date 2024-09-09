@@ -9,6 +9,7 @@ function toggleDrawer() {
 }
 
 // Dynamically generate the page after dom loads
+
 document.addEventListener("DOMContentLoaded", async function () {
   async function fetchYaml(url) {
     try {

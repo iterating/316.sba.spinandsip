@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="assets/styles.css">
     <style>
 
-.content {
-    padding: 20vw;
-    width: 100%;
-    height: 100%;
-    display: flex ;
-    align-items: center;
-    justify-content:  space-evenly;
-    max-width: 800px;
-    height: 900px;
+#content {
+        margin-top: 10%;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+
 }
 
 #calendar-header, #calendar-days {
@@ -45,36 +45,37 @@
 </head>
 <body>
 <!-- Navigation bar and login -->
-    <header>
-        <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
-             Bartending and Dj Services by Jinn and DJ Remedy
-   
-        <form action="" id="login">
-            <input type="text" 
-            id="username" 
-            name="username" 
-            placeholder="Username"
-            required>
-            <input type="text" 
-            id="password"
-            name="password"
-            placeholder="Password"
-            required>
-            <button type="submit" class="button-default">
-                Login
-            </button>
-        </form>
-    </header>
+<header>
+    <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
+            Bartending and Dj Services by Jinn and DJ Remedy
 
+    <form action="" id="login" >
+        <input type="text" style="display: flex;"
+        id="username" 
+        name="username" 
+        placeholder="Username"
+        required>
+        <input type="text" 
+        id="password"
+        name="password"
+        placeholder="Password"
+        required>
+        <button type="submit" class="button-default">
+            Login
+        </button>
+    </form>
+    
     <div class="drawer" id="drawer">
+        <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
         <a href="./book.html">Book</a>
         <a href="#">Logout</a>
     </div>
     <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
-
-
+</header>
+        
+        
 <main id="content">
     <div id="landing-section">
     <table class="calendar">

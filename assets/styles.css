@@ -35,7 +35,7 @@
   padding: 1vw;
 }
 
-
+/* 
 .landing-hero .headline-badge {
   position: relative;
   top: 100px;
@@ -49,7 +49,7 @@
 
 .landing-hero .headline-badge .headline-icon {
   margin-left: 5px;
-}
+} */
 
 .landing-section {
   text-align: center;
@@ -168,11 +168,12 @@ header {
     background-color: black;
 }
 
-header > .menu-icon {
+.menu-icon {
     text-align: left;
     cursor: pointer;
     font-size: 25px;
     margin: 0px 25px 0px 5px ;
+    z-index: 800;
 }
 
 /* Opens drawer */
@@ -185,7 +186,6 @@ header > .menu-icon {
     background-color: black;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
-    padding-top: 20px;
     z-index: 1000;
 }
 .drawer.open {

@@ -6,7 +6,8 @@
     <title>About</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <style>
-    main {
+    #content {
+        margin-top: 10%;
         padding: 20px;
         width: 100%;
         height: 100%;
@@ -53,7 +54,6 @@
     </style>
 </head>
 <body>
-    
 <!-- Navigation bar and login -->
     <header>
         <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
@@ -76,15 +76,15 @@
                 Login
             </button>
         </form>
+        <div class="drawer" id="drawer">
+            <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./book.html">Book</a>
+            <a href="#">Logout</a>
+        </div>
+        <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
     </header>
-
-    <div class="drawer" id="drawer">
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./book.html">Book</a>
-        <a href="#">Logout</a>
-    </div>
-    <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
 
 <main id="content">
         <div class="card-body" id="card-body">
