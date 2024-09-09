@@ -1,5 +1,7 @@
 # Spin and Sip Website
-Im inspired by how Nuxt works and started this project with a goal of dynamically rendering most of the content.
+[Live website](https://iterating.github.io/ps-sba-html-css/)
+
+I'm inspired by how Nuxt/Vue/React works and started this project with a goal of dynamically rendering most of the content. 
 
 ## Objectives
 - Populate homepage dynamically from yml file
