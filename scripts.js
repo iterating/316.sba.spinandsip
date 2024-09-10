@@ -1,4 +1,14 @@
-import {toggleDrawer, fetchYaml, renderHeroSection, renderFeatureSections, renderGeneralFeatures, renderTestimonials, renderCTA  } from './modules.js' 
+import { fetchYaml, renderHeroSection, renderFeatureSections, renderGeneralFeatures, renderTestimonials, renderCTA  } from './modules.js' 
+
+export async function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const content = document.getElementById("content");
+
+  drawer.classList.toggle("open");
+  overlay.classList.toggle("open");
+  content.classList.toggle("drawer-open");
+}
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -9,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 })
 
-async function renderLandingPage() {
+export async function renderLandingPage() {
   const page = await fetchYaml("indexx.yml");
   const content = document.getElementById("homepage");
   content.appendChild(renderHeroSection(page));
@@ -19,11 +29,10 @@ async function renderLandingPage() {
   content.appendChild(renderCTA(page));
 }
 
-async function renderTestimonialsPage() {
+export async function renderTestimonialsPage() {
   const page = await fetchYaml("indexx.yml");
   const content = document.getElementById("content");
   content.appendChild(renderTestimonials(page));
   content.appendChild(renderCTA(page));
 }
 
-renderLandingPage();

@@ -136,7 +136,7 @@ max-width: 70%;
   color: aliceblue;
   box-shadow: 0 0 8px black;
   padding: 0.4vw;
-  font-size: 0.8vw;
+  font-size: 1vw;
   overflow: hidden;
   text-overflow: clip;
   
@@ -146,7 +146,7 @@ max-width: 70%;
   border-radius: 8px;
   background-color: #7a12e2;
   color: aliceblue;
-  font-size: 0.5vw;
+  font-size: 1vw;
 
 }
 
@@ -255,12 +255,12 @@ h1 {
 h2 {
   font-size: 3vw;
 }
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px){}
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }
-
 /* Ex-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1400px) {
 }

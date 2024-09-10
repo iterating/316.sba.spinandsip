@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Jinn x DJ Remedy</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <style>
     #content {
         margin-top: 10%;
         padding: 20px;
-        width: 100%;
-        height: 100%;
         display: flex ;
         flex-flow: column;
         align-items: center;
-
     }
     .spinner-wrapper {
         position: relative;
@@ -44,7 +41,8 @@
         display: flex;
         flex-flow:  column;
         align-items: center;
-        justify-content: ce;
+        justify-content: center;
+        padding: 20px;
         }
 
         .img-container img {
@@ -53,6 +51,9 @@
 
         .card-body p, .card-body h1 {
         max-width: 450px;
+        display: flex;
+        flex-flow:  column;
+        
 
         }
     </style>
@@ -92,8 +93,8 @@
 
 <main id="content">
     <h1 style="text-align: center;margin: 0;padding: 0;"> Bartender Jinn x DJ Remedy</h1>
-    <p> Your dream team</p>
-        <div class="card-body" id="card-body">
+    <p style="text-align: center";"> Your dream team</p>
+    <div class="card-body" id="card-body">
             <div class="img-container"><img src="./public/bar.spinandsip.jinn.1.jpg" alt=""></div>
             <h1>Bartender Jinn</h1>
             <p>Jinn enjoys creating both craft cocktails and events themselves. He runs the drink service for Fanime Parkcon and Anime Expo Rooftop afterparties.</p>
@@ -101,17 +102,16 @@
         <div class="card-body" id="card-body">
             <div class="img-container"><img src="./public/bar.spinandsip.remedy.1.jpg" alt=""></div>
             <h1>DJ Remedy</h1>
-            <p>DJ Remedy is a professional DJ playing sets across LA and Las Vegas. He was mentored by Tiesto</p>
+            <p>DJ Remedy is a professional DJ playing sets across LA and Las Vegas. He was mentored by Tiesto.</p>
         </div>
         <div class="card-body" id="card-body">
             <img src="https://giffiles.alphacoders.com/173/173925.gif">
             <br>
             <h3>Spin Me</h3> 
+            <div class="spinner-wrapper">
+                <div class="spinner"></div>
             <br>
-        <div class="spinner-wrapper">
-            <div class="spinner"></div>
         </div>
 </main>
-<script type="module" src="modules.js"></script>
-<script type="module" src="scripts.js"></script></body>
+<script type="module" src="modules.js"></script></body>
 </html>
