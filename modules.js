@@ -13,7 +13,6 @@ export async function toggleDrawer() {
     console.error(error.message);
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".drawer-icon");
   const overlay = document.querySelector(".overlay");
@@ -25,12 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 export async function fetchYaml(url) {
   try {
     // Fetch the data source
     const response = await fetch(url, { method: "GET" });
     if (!response.ok) {
-      throw new Error("HTTP error: ${response.status}");
+      throw new Error(response.status);
         }
     // Convert YAML-textformat-> JSON
     const page = await response.text().then(jsyaml.load);
@@ -218,35 +218,34 @@ export function renderCTA(page) {
 
   return ctaDiv;
 }
-
-export async function renderLandingPage() {
+// choose data url, target element to render to, and sections to render
+export async function renderLandingPage(url, target, ...renderSelected) {
   try{
-    const page = await fetchYaml("indexx.yml");
-      if(!page){throw new Error("Yaml not loaded")};
-
-    const content = document.getElementById("homepage");
-      if(!content){throw new Error("#homepage element not found")};
-
-  let renderSelected = [
+    const page = await fetchYaml(url);
+    if(!page){throw new Error("Yaml not loaded")};
+    
+    const content = document.getElementById(target);
+    if(!content){throw new Error("#${targert} element not found")};
+    
+    const selectFunctions = {
       renderHeroSection,
       renderFeatureSections,
       renderGeneralFeatures,
       renderTestimonials,
       renderCTA,
-  ]
-    renderSelected.forEach(renderSelected=> {
-      content.appendChild(renderSelected(page));
-    });
+    };
+
+     renderSelected.forEach((funcName) => {
+       const renderFunction = selectFunctions[funcName];
+       if (renderFunction) {
+         content.appendChild(renderFunction(page));
+       } else {
+         console.error(`Function ${funcName} not found`);
+       }
+     });
+     //console.log(renderSelected);
 
   } catch(error){
-  console.error("error rendering page",error.messages);
+  console.error("error rendering page",error.message);
   }
 }
-
-export async function renderTestimonialsPage() {
-  const page = await fetchYaml("indexx.yml");
-  const content = document.getElementById("content");
-  content.appendChild(renderTestimonials(page));
-  content.appendChild(renderCTA(page));
-}
-
