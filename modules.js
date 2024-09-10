@@ -39,6 +39,22 @@ export async function fetchYaml(url) {
       console.error("YAML file not loaded:", error.message);  }
 }
 
+export async function fetchMarkdown(url, target) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("HTTP error: ${response.status}");
+    }
+    const markdownText = await response.text();
+    console.log(markdownText);
+    const htmlText = await DOMPurify.sanitize(marked.parse(markdownText));
+    const content = document.querySelector(target);
+    content.innerHTML = htmlText;
+  } catch (error) {
+    console.error("markdown file not loaded", error.message);
+  }
+}
+
 // Hero section
 export function renderHeroSection(page) {
   const heroDiv = document.createElement("div");
@@ -225,7 +241,7 @@ export async function renderLandingPage(url, target, ...renderSelected) {
     if(!page){throw new Error("Yaml not loaded")};
     
     const content = document.getElementById(target);
-    if(!content){throw new Error("#${targert} element not found")};
+    if(!content){throw new Error("#${target} element not found")};
     
     const selectFunctions = {
       renderHeroSection,

@@ -10,11 +10,11 @@
 ><img src= "public\ax.drinks.unitedstatesofsmashed.png" width="200" height="200">
 
 >### Deku Highball
-> Unconventional underdog drink for connoisseurs that's suprisingly sippable. `Whiskey base`  
+> Unconventional underdog drink for connoisseurs that's surprisingly sippable. `Whiskey base`  
 ><img src= "./public/ax.drinks.dekuhighball.png" width="200" height="210">
 
 >### Murder God  Margarita
-> Explosive strawberry margarita with Celsius caffiene to keep you getting up. `Tequila base`  
+> Explosive strawberry margarita with Celsius caffeine to keep you getting up. `Tequila base`  
 ><img src= "./public/ax.drinks.murdergodmargarita.png" width="180" height="210">
 
 
@@ -40,7 +40,7 @@
 ##  <img src= "./public/drinks.potions.png" width="50" height="50"> Potions
 *Keeps you alive through the night*
 >### Celsius Martini *`20`*
-> Celsius energy drink, vodka, and soju flavoring. In honor of a friend who couldnt be here. 
+> Celsius energy drink, vodka, and soju flavoring. In honor of a friend who couldn't be here. 
 
 >### Celsius Energy Drink *`8`*
 
