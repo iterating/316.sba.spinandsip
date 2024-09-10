@@ -10,7 +10,7 @@
         margin-top: 10%;
         padding: 20px;
         display: flex ;
-        flex-flow: column;
+        flex-flow: column wrap;
         align-items: center;
     }
     .spinner-wrapper {
@@ -39,36 +39,34 @@
         border: 1px solid wheat;
         width: 800px;
         display: flex;
-        flex-flow:  column;
+        flex-flow:  column wrap;
         align-items: center;
         justify-content: center;
-        padding: 20px;
         }
 
         .img-container img {
         height: auto;
+
         }
 
         .card-body p, .card-body h1 {
         max-width: 450px;
         display: flex;
         flex-flow:  column;
-        
-
         }
     </style>
 </head>
 <body>
 <!-- Navigation bar and login -->
 <header>
-    <span class="menu-icon" id="menu-icon">&#9776;</span>
+    <span class="drawer-icon" id="drawer-icon">&#9776;</span>
     <a href="./3.book.html" ><button class="cta-button"> 
         Book Us
     </button></a>
     <form action="" id="login">
         <input type="text" 
         id="username" 
-        name="username" p
+        name="username"
         placeholder="Username"
         required>
         <input type="text" 
@@ -82,16 +80,17 @@
     </form>
     
     <div class="drawer" id="drawer">
-        <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
+        <span class="drawer-icon">&#9776;</span>
         <a href="./index.html">Home</a>
         <a href="./2.about.html">About</a>
         <a href="./3.book.html">Book</a>
+        <a href="./4.drinks.html">Drinks</a>
+        <a href="./5.testimonials.html">Reviews</a>
         <a href="#">Logout</a>
     </div>
     <div class="overlay" id="overlay"></div>
 </header>
-
-<main id="content">
+<main id="content"class="content">    
     <h1 style="text-align: center;margin: 0;padding: 0;"> Bartender Jinn x DJ Remedy</h1>
     <p style="text-align: center";"> Your dream team</p>
     <div class="card-body" id="card-body">

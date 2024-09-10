@@ -72,6 +72,7 @@
   width: 20%;
 ;}
 
+
 .landing-card {
   background-color: #333;
   padding: 20px;
@@ -172,14 +173,12 @@ header {
     z-index: 999;
     background-color: black;
 }
-
-
 #username, #password {
   display: inline;
   max-width: 30%;
 }
 
-.menu-icon {
+.drawer-icon {
     text-align: left;
     cursor: pointer;
     font-size: 25px;
@@ -238,15 +237,9 @@ header {
 .drawer-open  {
     margin-left: 200px;
 }
-main {
+.content {
     padding: 20px;
     transition: margin-left 0.3s ease;
-}
-
-@media (max-width: 767px) {
-  body {
-    padding: 0;
-  }
 }
 
 h1 {
@@ -256,6 +249,13 @@ h2 {
   font-size: 3vw;
 }
 
+
+
+@media (max-width: 767px) {
+body {
+  padding: 0;
+}
+}
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px){}
 /* Large devices (large desktops, 1200px and up) */

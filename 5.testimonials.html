@@ -3,14 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimontial</title>
+    <title>Testimontials</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-<div id="content"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
+    
+<!-- Navigation bar and login -->
+<header>
+    <span class="drawer-icon" id="drawer-icon">&#9776;</span>
+    <a href="./3.book.html" ><button class="cta-button"> 
+        Book Us
+    </button></a>
+    <form action="" id="login">
+        <input type="text" 
+        id="username" 
+        name="username"
+        placeholder="Username"
+        required>
+        <input type="text" 
+        id="password"
+        name="password"
+        placeholder="Password"
+        required>
+        <button type="submit" class="button-default">
+            Login
+        </button>
+    </form>
+    
+    <div class="drawer" id="drawer">
+        <span class="drawer-icon">&#9776;</span>
+        <a href="./index.html">Home</a>
+        <a href="./2.about.html">About</a>
+        <a href="./3.book.html">Book</a>
+        <a href="./4.drinks.html">Drinks</a>
+        <a href="./5.testimonials.html">Reviews</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+</header>
 
+<!-- Content  -->
+<main id="content"class="content">    
+</main>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
 <script type="module">
 import { renderTestimonialsPage } from './modules.js'
-  renderTestimonialsPage()
+renderTestimonialsPage();
 </script>
+</body>
 </html>

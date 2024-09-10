@@ -1,22 +1,27 @@
 export async function toggleDrawer() {
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
-  const content = document.getElementById("content");
-
-  drawer.classList.toggle("open");
-  overlay.classList.toggle("open");
-  content.classList.toggle("drawer-open");
+  try {
+    const drawer = document.querySelector(".drawer");
+    const overlay = document.querySelector(".overlay");
+    const content = document.querySelector(".content");
+    if (!drawer || !overlay || !content) {
+      throw new Error("drawer, overlay, content elements not found.");
+    }
+    drawer.classList.toggle("open");
+    overlay.classList.toggle("open");
+    content.classList.toggle("drawer-open");
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  const menuIcon = document.querySelector(".menu-icon");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".drawer-icon");
   const overlay = document.querySelector(".overlay");
 
   [menuIcon, overlay].forEach((element) => {
     if (element) {
       element.addEventListener("click", toggleDrawer);
-    }
-    else console.error("Elements not found on page")
+    } else console.error(".drawer-icon .overlay elements not found on page");
   });
 });
 
@@ -24,15 +29,14 @@ export async function fetchYaml(url) {
   try {
     // Fetch the data source
     const response = await fetch(url, { method: "GET" });
-    // console.log(response);
-
-    // Convert YAML to JSON
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+        }
+    // Convert YAML-textformat-> JSON
     const page = await response.text().then(jsyaml.load);
-
     return page;
-  } catch (error) {
-    console.error("YAML file not loaded", error);
-  }
+    } catch (error) {
+      console.error("YAML file not loaded:", error.message);  }
 }
 
 // Hero section
@@ -145,7 +149,7 @@ export function renderGeneralFeatures(page) {
 // Testimonials section
 export function renderTestimonials(page) {
   const testimonialsDiv = document.createElement("div");
-  testimonialsDiv.className = "landing-testimonials";
+  testimonialsDiv.className = "landing-section";
 
   const h2 = document.createElement("h2");
   h2.textContent = page.testimonials.title;
@@ -216,13 +220,27 @@ export function renderCTA(page) {
 }
 
 export async function renderLandingPage() {
-  const page = await fetchYaml("indexx.yml");
-  const content = document.getElementById("homepage");
-  content.appendChild(renderHeroSection(page));
-  content.appendChild(renderFeatureSections(page));
-  content.appendChild(renderGeneralFeatures(page));
-  content.appendChild(renderTestimonials(page));
-  content.appendChild(renderCTA(page));
+  try{
+    const page = await fetchYaml("indexx.yml");
+      if(!page){throw new Error("Yaml not loaded")};
+
+    const content = document.getElementById("homepage");
+      if(!content){throw new Error("#homepage element not found")};
+
+  let renderSelected = [
+      renderHeroSection,
+      renderFeatureSections,
+      renderGeneralFeatures,
+      renderTestimonials,
+      renderCTA,
+  ]
+    renderSelected.forEach(renderSelected=> {
+      content.appendChild(renderSelected(page));
+    });
+
+  } catch(error){
+  console.error("error rendering page",error.messages);
+  }
 }
 
 export async function renderTestimonialsPage() {

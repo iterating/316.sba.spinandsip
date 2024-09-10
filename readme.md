@@ -16,7 +16,11 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 # Outcomes
 - Designed and built a cohesive theme that conveys critical information first that is applied though the website and each element. This work requires much time consuming design and implementation. It explains why many websites nowadays look similar to each other. They share common UI components for user familiartity and developer efficiency.   
     - I challenged myself to use overlays and overcoming to have some elements shrink with device size and some elements stay at a readable size. This was accomplished with CSS selectors and Flexbox.  
+    - While learning and implementing Tailwind CSS, I judged the time it wil take me to familiarize with Tailwind could be a barrier to finishing a MVP by the deadline, and the addition of framework also goes against the objective of learning fundamental web standards with this project. I decided to use the CSS skills I have learned in class to build this
 - Learned some details of using modules. I thought deeply about adding page components programatically when possible, and used modules for flexibility and keeping DRY. As I write my code from what I want it to do and keep refactoring it, I better conceptualize how start with building with the end in mind.
+- I'm excited to apply my resourcefulness and build with the plethora of open source code and libraries in the world eventually. For this project and my status as a novice, I am coding from flow, familiarizing with the fundamentals, and at times banging my head against debugging and troubleshooting. This way I can prioritize applying the fundementals over how frameworks can influence and shape my habits. 
+- Running into bugs exposes me to the way code can break, and how to build my code to handle errors. By running my code on an empty HTML document, I found how my implementation of `addEventListener` breaks when `getElementbyID` doesnt find its elements, and became aware of implementing error handling as a write my code. 
+
 ## Further Projects
 - [ ] In the future, I would like learn to build Webcomponents to build and use HTML by components to promote DRY. For example, the `side menu drawer`,`navbar`, and `login` components ideally should be referenced, not repeated, in each page
     - [ ] Understand how shadow DOM works and how to utilize it effectively and cleanly
@@ -45,7 +49,7 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 - [x] Use colors that complement each other.
     - I used color picker pick and choose complementary colors from the images
 - [x] Use Flexbox and/or the Bootstrap Grid. 
-    - Utilized Flexbox  for mobile first design
+    - Utilized Flexbox for mobile first design
 - [x] Use at least two CSS animations. 
     - there is a fun animation /about 
     - The sidebar drawer is animated

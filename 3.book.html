@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="assets/styles.css">
     <style>
 
-#content {
-        margin-top: 10%;
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-        display: flex ;
-        flex-flow: wrap column;
-        align-items: center;
+.content {
+    margin-top: 10%;
+    padding: 20px;
+    display: flex ;
+    flex-flow: wrap column;
+    align-items: center;
 }
-
+.calendar{
+display: flex;    
+justify-content: center;
+}
 #calendar-header, #calendar-days {
     display: flex;
-    flex-flow: wrap ;
-    width: 700px;
+    flex-flow: wrap;
+    width: 70vw;
 }
 .day,th {
-    width: 100px;
-    height: 70px;
-    padding: 20px;
+    width: 10vw;
+    height: 7vw;
+    padding: 2vw;
+    font-size: 1.1vw;
     text-align: center;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -41,8 +43,8 @@
 #booking-form{
     margin-top: 20px;
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
     </style>
@@ -50,14 +52,14 @@
 <body>
 <!-- Navigation bar and login -->
 <header>
-    <span class="menu-icon" id="menu-icon">&#9776;</span>
+    <span class="drawer-icon" id="drawer-icon">&#9776;</span>
     <a href="./3.book.html" ><button class="cta-button"> 
         Book Us
     </button></a>
     <form action="" id="login">
         <input type="text" 
         id="username" 
-        name="username" p
+        name="username"
         placeholder="Username"
         required>
         <input type="text" 
@@ -71,17 +73,19 @@
     </form>
     
     <div class="drawer" id="drawer">
-        <span class="menu-icon" onclick="toggleDrawer()">&#9776;</span>
+        <span class="drawer-icon">&#9776;</span>
         <a href="./index.html">Home</a>
         <a href="./2.about.html">About</a>
         <a href="./3.book.html">Book</a>
+        <a href="./4.drinks.html">Drinks</a>
+        <a href="./5.testimonials.html">Reviews</a>
         <a href="#">Logout</a>
     </div>
     <div class="overlay" id="overlay"></div>
 </header>
         
         
-<main id="content">
+<main class="content">
     <h1>Book us for your event</h1>
     <div id="landing-section">
     <table class="calendar">
