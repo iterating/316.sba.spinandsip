@@ -27,7 +27,7 @@ sections:
         description: Professional bartender Jinn crafts signature cocktails and serve your favorite drinks. Whether it's classic cocktails or personalized beverages, we cater to your tastes and theme.
         icon: ./public/ax.drinks.unitedstatesofsmashed.png
       - name: Professional DJ Services
-        description: DJ Remedy gets the crowd moving, knows how to read the room and keep the energy high. From chill lounge vibes to a full dance floor, we’ve got you covered.
+        description: DJ  Remedy gets the crowd moving, knows how to read the room and keep the energy high. From chill lounge vibes to a full dance floor, we’ve got you covered.
         icon: ./public/bar.spinandsip.anime.1.png
       - name: Seamless Experience
         description: We take care of everything – from setup to cleanup – so you can relax and enjoy the event with your guests. Our team works closely with you to tailor our services to your event’s unique needs.

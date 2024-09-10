@@ -25,7 +25,7 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 - [ ] In the future, I would like learn to build Webcomponents to build and use HTML by components to promote DRY. For example, the `side menu drawer`,`navbar`, and `login` components ideally should be referenced, not repeated, in each page
     - [ ] Understand how shadow DOM works and how to utilize it effectively and cleanly
     - [ ] Build my own collection of components for practice and future use in projects
-- [ ] Include a drinks menu page that's rendered from a markdown document. 
+- [x] Include a drinks menu page that's rendered from a markdown document. I believe Markdown and YAML make a `grep`-able, time saving CMS system 
 - Build a working calendar booking component. Programatically check the month and add empty `<td class="day">` elements to fill up the first week calendar cells according to the date. 
     - Explore different compnents, libraries, APIs, and methods of offering a public facing way to interface with calendar booking. This might be a long project. 
         - Explore working with iCalendar format and with gCal API 

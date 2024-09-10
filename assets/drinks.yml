@@ -1,0 +1,50 @@
+premiums:
+  title: Premium Cocktails  
+  description: Specialty cocktails with premium liquor
+  img: drinks.cocktails.png
+  iconsize: sm
+  price: 20
+  drinks:
+    - drink: Soju Mimic Cocktail
+      description: Tastes like soju, but its not. Comes with a soju bottle charm!
+      base: Vodka Tequila  
+      img: ax.drinks.soju.png
+      img2: drinks.mimic.png
+
+    - drink: United States of Smashed
+      description: The aesthetic symbol to celebrate  the red, white, and blue. 
+      base: Vodka   
+      img: ax.drinks.unitedstatesofsmashed.png
+
+    - drink: Deku Highball
+      description: Unconventional underdog drink for connoisseurs that's suprisingly sippable.
+      base: Whiskey  
+      img: ax.drinks.dekuhighball.png
+
+    - drink:  Murder God  Margarita
+      description: Explosive strawberry margarita with Celsius caffiene to keep you getting up. 
+      base: Tequila   
+      img: ax.drinks.murdergodmargarita.png
+
+classics:
+    title: Classic Drinks
+    description: Your classic drinks
+    price: 15  
+    img: drinks.poisons.png 
+    iconsize: small  
+    upgrade: Upgrade to triple shot
+    price: 5
+    drinks:
+    - drink: Old Fashioned 
+      description: Jack Daniels, angostura, simple syrup, stirred.  
+
+    - drink: Cranberry Vodka 
+
+    - drink: Vodka Soda/Tonic
+
+    - drink: Paloma
+
+    - drink: Tequila Soda/Tonic
+
+    - drink: Whiskey Coke 
+

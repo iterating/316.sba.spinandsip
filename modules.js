@@ -30,7 +30,7 @@ export async function fetchYaml(url) {
     // Fetch the data source
     const response = await fetch(url, { method: "GET" });
     if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error("HTTP error: ${response.status}");
         }
     // Convert YAML-textformat-> JSON
     const page = await response.text().then(jsyaml.load);
@@ -249,3 +249,4 @@ export async function renderTestimonialsPage() {
   content.appendChild(renderTestimonials(page));
   content.appendChild(renderCTA(page));
 }
+

@@ -40,8 +40,31 @@
     </div>
     <div class="overlay" id="overlay"></div>
 </header>
-<div class="content"></div>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<div class="content" id="content"></div>
+
 <script type="module" src="modules.js"></script>
+<!-- Marked parses Markdown into HTML -->
+<script  src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- DOMPurify sanitizes HTML -->
+<script src="
+https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js
+"></script>
+<script>
+
+async function fetchMarkdown(url) {
+    try {
+        const response= await fetch(url);
+        if (!response.ok){
+            throw new Error("HTTP error: ${response.status}")
+        }
+        const markdownText = await response.text()
+        const htmlText = DOMPurify.sanitize(marked.parse(markdownText))        
+        const content= document.querySelector("#content");
+        content.innerHTML=htmlText    
+    } catch (error) {
+        console.error("markdown file not loaded", error.message);
+    }}
+fetchMarkdown("./assets/menu.md");
+</script>
 </body>
 </html>
