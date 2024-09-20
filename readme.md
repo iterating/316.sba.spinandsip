@@ -9,6 +9,8 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 - Programmatically create cards and sections according to yml data
 - Prioritize UX 
 
+## Overview
+
 ## Tools Used
 - jsyaml for processing yaml into json. I decided to use CDN delivered to keep the files light. I would include local libraries if I were to prioritize long term reliability and interoperability. For larger projects, I would consider using a framework for package management. My tech choices here reflect this project as a learning project with a goal of gaining deeper insight of current web standards of HTML, CSS and Javascript.
 - Flexbox is used heavily for mobile first design

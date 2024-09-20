@@ -44,7 +44,7 @@
     <div class="content" id="content"></div>
 </div>
 
-<script type="module" src="modules.js"></script>
+<script type="module" src="modules.mjs"></script>
 <!-- Marked parses Markdown into HTML -->
 <script  src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- DOMPurify sanitizes HTML -->
@@ -52,7 +52,7 @@
 https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js
 "></script>
 <script type="module">
-import { fetchMarkdown } from "./modules.js"
+import { fetchMarkdown } from "./modules.mjs"
 fetchMarkdown("/assets/menu.md", "#content");
 </script>
 </body>
