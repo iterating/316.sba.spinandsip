@@ -32,22 +32,28 @@ export const bookingCalendar = () => {
     // Calendar day click handler
     let selectedDays = [];
     const handleDayClick = (event) => {
+      const dayElement = event.target;
       if (
-        event.target.classList.contains("day") &&
-        !event.target.classList.contains("booked")
+        dayElement.classList.contains("day") &&
+        !dayElement.classList.contains("booked")
       ) {
-        event.target.classList.add("booked");
-        selectedDays.push(event.target.textContent);
+        dayElement.classList.add("booked");
+        selectedDays.push(dayElement.textContent);
         // console.log(selectedDays);
+        // Navigate to parent and add a border
+        dayElement.parentNode.style.border = "2px solid #7a12e2";
       } else if (
-        event.target.classList.contains("day") &&
-        event.target.classList.contains("booked")
+        dayElement.classList.contains("day") &&
+        dayElement.classList.contains("booked")
       ) {
-        event.target.classList.remove("booked");
-        removeItem(selectedDays, event.target.textContent);
-        // console.log(selectedDays)
+        dayElement.classList.remove("booked");
+        removeItem(selectedDays, dayElement.textContent);
+        // console.log(selectedDays);
       }
-    };
+      if (selectedDays.length === 0) {
+        dayElement.parentNode.style.border = ""
+    }
+  }
   
     // Populate date field with selected dates
     const handleDateFieldFocus = () => {
@@ -55,6 +61,7 @@ export const bookingCalendar = () => {
     };
   
 
+  
     // Event handler for form submission
     const handleFormSubmit = (event) => {
       event.preventDefault();
@@ -123,6 +130,5 @@ export const bookingCalendar = () => {
   document.addEventListener("DOMContentLoaded", () => {
         makeCalendar();
         registerEventListeners();
-        resizeCalendar();
       });
     }      
