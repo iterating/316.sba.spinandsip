@@ -128,9 +128,10 @@ export const bookingCalendar = () => {
       dateField.addEventListener("focus", handleDateFieldFocus);
     };
 
+    // Initialize on DOM load
     document.addEventListener("DOMContentLoaded", () => {
         makeCalendar();
         registerEventListeners();
-        resizeCalendar(); // Initial resize
+        resizeCalendar();
       });
     }      
