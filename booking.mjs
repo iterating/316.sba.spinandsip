@@ -86,6 +86,27 @@ export const bookingCalendar = () => {
           return;
         }
   
+        const nameValidation = [
+          {
+            test: () => !name,
+            message: "The name field cannot be blank.",
+          },
+          {
+            test: () => /[<>&"'\/\\]/.test(name),
+            message: "The name field cannot contain <, >, &, \", ', /, or \\.",
+          },
+        ];
+        nameValidation.forEach((validation) => {
+          if (validation.test()) {
+            errors.push(validation.message);
+          }
+        });
+        if (errors.length > 0) {
+          window.alert(errors.join("\n"));
+        } else {
+          window.alert(`Thank you for booking with us, ${name}!`);
+
+        }
       } catch (error) {
         console.error("An error occurred:", error);
       }
