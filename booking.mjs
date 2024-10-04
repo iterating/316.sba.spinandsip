@@ -19,18 +19,6 @@ export const bookingCalendar = () => {
       calendarDays.appendChild(calFragment);
     };
   
-    // Resize calendar to users window size
-    const resizeCalendar = () => {
-        const calendarWidth = window.innerWidth * 0.7;
-        const dayWidth = calendarWidth / 7;
-        const dayHeight = dayWidth * 0.7;
-      
-      document.querySelectorAll(".day, th").forEach((day) => {
-        day.style.width = `${dayWidth}px`;
-        day.style.height = `${dayHeight}px`;
-        day.style.fontSize = `${dayWidth * 0.12}px`;
-      });
-    };
   
     const removeItem = (array, itemToRemove) => {
       const index = array.indexOf(itemToRemove);

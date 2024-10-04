@@ -13,7 +13,6 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 ## Overview
 - The booking calendar is dynamically generated using DocumentFragment and cloneNode. Wicth DOM and DOM methods and event handling logic, the user can click and select dates on the calendar. 
 - The selected dates are processed into a `selectedDates` array, which populates the dates section of the form. Users can select and deselect dates due to data handling logic and `array.splice`.
-- The calendar sizing is based on the ser's browser window size. 
 - The form input fields are validated by regex on submission. 
 - The booking data is stored as an object in a array on localstorage. Window size is stored for UX purposes. In the future it will be stored to database such as Supabase. 
 - Practiced writing arrow functions 
