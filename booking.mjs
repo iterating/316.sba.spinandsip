@@ -16,7 +16,13 @@ export const bookingCalendar = () => {
       }
       calendarDays.appendChild(calFragment);
     };
-      // Style the calendar cells
+  
+    // Resize calendar to users window size
+    const resizeCalendar = () => {
+        const calendarWidth = window.innerWidth * 0.7;
+        const dayWidth = calendarWidth / 7;
+        const dayHeight = dayWidth * 0.7;
+      
       document.querySelectorAll(".day, th").forEach((day) => {
         day.style.width = `${dayWidth}px`;
         day.style.height = `${dayHeight}px`;
@@ -53,16 +59,65 @@ export const bookingCalendar = () => {
       }
     };
   
-    // Populate dates field with selected dates
+    // Populate date field with selected dates
     const handleDateFieldFocus = () => {
       dateField.value = `${selectedDays.join(", ")}`;
     };
   
-      // Resize calendar to users window size
-  const resizeCalendar = () => {
-    const calendarWidth = window.innerWidth * 0.7;
-    const dayWidth = calendarWidth / 7;
-    const dayHeight = dayWidth * 0.7;
+
+    // Event handler for form submission
+    const handleFormSubmit = (event) => {
+      event.preventDefault();
+      try {
+        const bookingForm = document.getElementById("booking-form");
+        const startTimeField = document.getElementById("start-time");
+        const endTimeField = document.getElementById("end-time");
+        const formData = new FormData(bookingForm);
+        let name = formData.get("name");
+  
+        let errors = [];
+  
+        let startTime = startTimeField.value;
+        let endTime = endTimeField.value;
+        if (startTime >= endTime) {
+          window.alert("End time must be after start time.");
+          return;
+        }
+  
+        const nameValidation = [
+          {
+            test: () => !name,
+            message: "The name field cannot be blank.",
+          },
+          {
+            test: () => /[<>&"'\/\\]/.test(name),
+            message: "The name field cannot contain <, >, &, \", ', /, or \\.",
+          },
+        ];
+        nameValidation.forEach((validation) => {
+          if (validation.test()) {
+            errors.push(validation.message);
+          }
+        });
+        if (errors.length > 0) {
+          window.alert(errors.join("\n"));
+        } else {
+          window.alert(`Thank you for booking with us, ${name}!`);
+          let bookingData = {
+            bookingId: Date.now().toString(),
+            name: name.toLowerCase(),
+            bookingDates: selectedDays,
+            bookingTime: `${startTime} to ${endTime}`,
+            windowsize: `${window.innerWidth}px x ${window.innerHeight}px`,
+          };
+          bookingsArray.push(bookingData);
+          localStorage.setItem("bookings", JSON.stringify(bookingsArray));
+          bookingForm.reset();
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
   
     // Register event listeners
     const registerEventListeners = () => {
@@ -70,11 +125,10 @@ export const bookingCalendar = () => {
       calendarDays.addEventListener("click", handleDayClick);
       dateField.addEventListener("focus", handleDateFieldFocus);
     };
-  
-    // Initialize the calendar and event listeners on DOM load
-   document.addEventListener("DOMContentLoaded", () => {
-    makeCalendar();
-    registerEventListeners();
-    resizeCalendar(); // Initial resize
-  });
-  }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        makeCalendar();
+        registerEventListeners();
+        resizeCalendar(); // Initial resize
+      });
+    }      
