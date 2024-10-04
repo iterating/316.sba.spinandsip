@@ -27,7 +27,7 @@ justify-content: center;
     width: 10vw;
     height: 7vw;
     padding: 2vw;
-    font-size: 1.1vw;
+    font-size: 1.5vw;
     text-align: center;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -36,10 +36,16 @@ justify-content: center;
 .day:hover {
     background-color: #7a12e2;
 }
+.booked {
+    background-color: #7a12e2;
+}
 .submit-button {
     background-color: #7a12e2;
     color: #bfbfbf;
 }
+.submit-button:hover {
+        background-color: #45a049;
+    }
 #booking-form{
     margin-top: 20px;
     display: flex;
@@ -99,6 +105,7 @@ justify-content: center;
             <th>Sat</th>
         </tr>
         <tr id="calendar-days">
+            <th id="day-template"></th>
         </tr>   
     </table>
 
@@ -108,19 +115,22 @@ justify-content: center;
         <br>
         <label for="party-size">Party size:</label>
         <select name="party-size" id="party-size">
-        <option value=""> -- How Many At Your Event? -- </option>
-        <option value="one-to-thirty">1-30</option>
-        <option value="thirty-to-ninety">30-60</option>
-        <option value="ninety-to-onefifty">90-150</option>
-        <option value="onefifty-to-twoohundred">150-200</option>
-        <option value="twohundredplus">200+</option>
+            <option value=""> -- How Many At Your Event? -- </option>
+                <option value="one-to-thirty">1-30</option>
+                <option value="thirty-to-ninety">30-60</option>
+                <option value="ninety-to-onefifty">90-150</option>
+                <option value="onefifty-to-twoohundred">150-200</option>
+                <option value="twohundredplus">200+</option>
         </select>
         <br>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-        
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
+        <label for="dates">Dates:</label>
+        <input type="dates" id="dates" name="dates" placeholder="Click on the calendar dates to book, then click here!"
+        <br>
+        <label for="start-time">Start Time:</label>
+        <input type="time" id="start-time" name="start-time" required>
+        <br>
+        <label for="end-time">End Time:</label>
+        <input type="time" id="end-time" name="end-time" required>
         
         <button class="submit-button" type="submit">Book Now</button>
     </form>
@@ -128,21 +138,9 @@ justify-content: center;
     </div>
 </main>
 
-
-<script>
-
-
-makeCalendar=()=> {
-    const calendar = document.getElementById('calendar-days');
-    for (let day = 1; day < 31; day++) {
-        const dayElement = document.createElement('td');
-        dayElement.className = 'day';
-        dayElement.innerText = day;
-        calendar.appendChild(dayElement);
-    }
-}
-makeCalendar();
-
+<script type="module" src="./modules.mjs"></script>
+<script type="module">
+    import {bookingCalendar} from "./booking.mjs"
+    bookingCalendar()
 </script>
-<script type="module" src="modules.mjs"></script>
 </html>

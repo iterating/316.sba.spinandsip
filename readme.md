@@ -37,32 +37,36 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 
 
 ### HTML Requirements
-- [x] Have at least three pages.
-- [x] Keep the grid system consistent between pages as much as possible.
-- [x] Use at least ten different HTML tags.
-- [x] Include at least one table.
-    - the calendar in /book
-- [x] Include at least two forms.
-- [x] Include at least one dropdown menu.
-- [x] Include at least one of each of the following forms of content: 
-    - [x] Text.
-    - [x] Images.
-    - [x] GIFs
-#### CSS Requirements
-- [x] Make use of inline, internal, and external styling.
-- [x] Use five different CSS selectors.
-- [x] Use colors that complement each other.
-    - I used color picker pick and choose complementary colors from the images
-- [x] Use Flexbox and/or the Bootstrap Grid. 
-    - Utilized Flexbox for mobile first design
-- [x] Use at least two CSS animations. 
-    - there is a fun animation /about 
-    - The sidebar drawer is animated
+Cache at least one element using selectElementByld.
 
-### Deliverables
-- [x] Your completed project in a ZIP file, which should include all HTML files and any external CSS files. 
-- [x] Include a README file that includes technical specifications and a description of your website.
-- [x] A GitHub link to your project’s repository.
-- [x] Include the link to your GitHub account in your README file.
-- [x] Upload the GitHub link to this project to Canvas.
+- [x] Cache at least one element using querySelector or querySelectorAll.
 
+- [x] Use the parent—child—sibling relationship to navigate between elements at least once(firstChild, lastChild, parentNode, nextElementSibling, etc.).
+
+- [x] lterate over a collection of elements to accomplish some task.
+
+- [x] Create at least one element using createElement.
+
+- [x] Use appendChild and/or prepend to add new elements to the DOM.
+
+- [x] Use the DocumentFragment interface or HTM L templating with the cloneNode method to create templated content.
+
+- [x] Modify the HTM L or text content of at least one element in response to user interaction using innerHTM L, innerText, or textContent.
+
+- [x] Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+
+- [x] Modify at least one attribute of an element in response to user interaction.
+
+- [x] Register at least two different event listeners and create the associated event handler functions.
+
+- [x] Use at least two Browser Object Model (BOM) properties or methods.
+
+- [x] Include at least one form and/or input with HTM L attribute validation.
+
+- [x] Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
+
+- [x] Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
+
+- [x] Commit frequently to the git repository.
+
+- [x] Include a README file that contains a description of your application.
