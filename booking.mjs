@@ -58,6 +58,11 @@ export const bookingCalendar = () => {
       dateField.value = `${selectedDays.join(", ")}`;
     };
   
+      // Resize calendar to users window size
+  const resizeCalendar = () => {
+    const calendarWidth = window.innerWidth * 0.7;
+    const dayWidth = calendarWidth / 7;
+    const dayHeight = dayWidth * 0.7;
   
     // Register event listeners
     const registerEventListeners = () => {
@@ -72,5 +77,4 @@ export const bookingCalendar = () => {
     registerEventListeners();
     resizeCalendar(); // Initial resize
   });
-    
-  
+  }
