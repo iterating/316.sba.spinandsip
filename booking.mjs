@@ -105,7 +105,16 @@ export const bookingCalendar = () => {
           window.alert(errors.join("\n"));
         } else {
           window.alert(`Thank you for booking with us, ${name}!`);
-
+          let bookingData = {
+            bookingId: Date.now().toString(),
+            name: name.toLowerCase(),
+            bookingDates: selectedDays,
+            bookingTime: `${startTime} to ${endTime}`,
+            windowsize: `${window.innerWidth}px x ${window.innerHeight}px`,
+          };
+          bookingsArray.push(bookingData);
+          localStorage.setItem("bookings", JSON.stringify(bookingsArray));
+          bookingForm.reset();
         }
       } catch (error) {
         console.error("An error occurred:", error);
