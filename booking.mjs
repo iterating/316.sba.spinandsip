@@ -1,10 +1,12 @@
 export const bookingCalendar = () => {
     // parse the bookings stored as objects in localstorage array, otherwise make the array 
     let bookingsArray = JSON.parse(localStorage.getItem("bookings")) || [];
-  
+    const bookingForm = document.querySelector("#booking-form");
     const calendarDays = document.getElementById("calendar-days");
     const dayTemplate = document.getElementById("day-template");
-  
+    const dateField = document.getElementById("dates");
+
+    
     // Create calendar with DocumentFragment and cloneNode
     const makeCalendar = () => {
       const calFragment = document.createDocumentFragment();
@@ -26,7 +28,7 @@ export const bookingCalendar = () => {
       document.querySelectorAll(".day, th").forEach((day) => {
         day.style.width = `${dayWidth}px`;
         day.style.height = `${dayHeight}px`;
-        day.style.fontSize = `${dayWidth * 0.1}px`;
+        day.style.fontSize = `${dayWidth * 0.12}px`;
       });
     };
   
@@ -84,36 +86,6 @@ export const bookingCalendar = () => {
           return;
         }
   
-        const nameValidation = [
-          {
-            test: () => !name,
-            message: "The name field cannot be blank.",
-          },
-          {
-            test: () => /[<>&"'\/\\]/.test(name),
-            message: "The name field cannot contain <, >, &, \", ', /, or \\.",
-          },
-        ];
-        nameValidation.forEach((validation) => {
-          if (validation.test()) {
-            errors.push(validation.message);
-          }
-        });
-        if (errors.length > 0) {
-          window.alert(errors.join("\n"));
-        } else {
-          window.alert(`Thank you for booking with us, ${name}!`);
-          let bookingData = {
-            bookingId: Date.now().toString(),
-            name: name.toLowerCase(),
-            bookingDates: selectedDays,
-            bookingTime: `${startTime} to ${endTime}`,
-            windowsize: `${window.innerWidth}px x ${window.innerHeight}px`,
-          };
-          bookingsArray.push(bookingData);
-          localStorage.setItem("bookings", JSON.stringify(bookingsArray));
-          bookingForm.reset();
-        }
       } catch (error) {
         console.error("An error occurred:", error);
       }
