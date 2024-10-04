@@ -50,7 +50,7 @@ export const bookingCalendar = () => {
       ) {
         event.target.classList.add("booked");
         selectedDays.push(event.target.textContent);
-        console.log(selectedDays);
+        // console.log(selectedDays);
       } else if (
         event.target.classList.contains("day") &&
         event.target.classList.contains("booked")
@@ -78,7 +78,8 @@ export const bookingCalendar = () => {
         let name = formData.get("name");
   
         let errors = [];
-  
+
+        //Validate time
         let startTime = startTimeField.value;
         let endTime = endTimeField.value;
         if (startTime >= endTime) {
@@ -101,10 +102,12 @@ export const bookingCalendar = () => {
             errors.push(validation.message);
           }
         });
+        // Display error items in window alert
         if (errors.length > 0) {
           window.alert(errors.join("\n"));
         } else {
           window.alert(`Thank you for booking with us, ${name}!`);
+          //save booking data as object
           let bookingData = {
             bookingId: Date.now().toString(),
             name: name.toLowerCase(),
@@ -128,8 +131,8 @@ export const bookingCalendar = () => {
       dateField.addEventListener("focus", handleDateFieldFocus);
     };
 
-    // Initialize on DOM load
-    document.addEventListener("DOMContentLoaded", () => {
+  // Initialize the calendar and event listeners on DOM load
+  document.addEventListener("DOMContentLoaded", () => {
         makeCalendar();
         registerEventListeners();
         resizeCalendar();

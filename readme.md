@@ -1,6 +1,7 @@
 # Spin and Sip Website
-[Live website](https://iterating.github.io/ps-sba-html-css/)
-[Github source](https://github.com/iterating/ps-sba-html-css)
+[Live website](https://iterating.github.io/ps-316-sba/3.book.html)  
+
+[Github source](https://github.com/iterating/ps-316-sba/blob/main/booking.mjs)
 
 I'm inspired by how Nuxt/Vue/React works and started this project with a goal of dynamically rendering most of the content. 
 
@@ -14,7 +15,8 @@ I'm inspired by how Nuxt/Vue/React works and started this project with a goal of
 - The selected dates are processed into a `selectedDates` array, which populates the dates section of the form. Users can select and deselect dates due to data handling logic and `array.splice`.
 - The calendar sizing is based on the ser's browser window size. 
 - The form input fields are validated by regex on submission. 
-- The booking data is stored as an object in a array on localstorage. in the future it will be stored to database such as Supabase. 
+- The booking data is stored as an object in a array on localstorage. Window size is stored for UX purposes. In the future it will be stored to database such as Supabase. 
+- Practiced writing arrow functions 
 ## Tools Used
 - jsyaml for processing yaml into json. I decided to use CDN delivered to keep the files light. I would include local libraries if I were to prioritize long term reliability and interoperability. For larger projects, I would consider using a framework for package management. My tech choices here reflect this project as a learning project with a goal of gaining deeper insight of current web standards of HTML, CSS and Javascript.
 - Flexbox is used heavily for mobile first design
